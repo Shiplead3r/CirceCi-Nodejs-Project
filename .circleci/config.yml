@@ -20,6 +20,9 @@ jobs:
       - run:
           name : "Get currnet system user"
           command: "id"
+      - run:
+          name : "Get root"
+          command: "sudo id"
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
