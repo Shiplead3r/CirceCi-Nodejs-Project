@@ -15,8 +15,6 @@ jobs:
   world:
     docker:
       - image: cirecleci/node:13.8.0
-    requires:
-      - hello
     steps:
       - run:
           name: "World"
@@ -46,5 +44,7 @@ workflows:
   say-hello-workflow:
     jobs:
       - hello
-      - world
+      - world:
+          requires:
+            - hello
    
