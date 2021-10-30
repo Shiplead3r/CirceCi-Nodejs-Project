@@ -19,7 +19,13 @@ jobs:
       - run:
           name: "World"
           command: "echo world"
-
+  print_ex_var:
+    docker:
+      - image: circleci/node:13.8.0
+    steps:
+      - run:
+          name: "Welcome"
+          command: "echo $EX_VAR"
   say-hello:
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
